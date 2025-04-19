@@ -31,6 +31,7 @@ requirements:
     - sympy
     - typer
     - toml
+    - myokit
 test:
   requires:
     - python {{ python_min }}
