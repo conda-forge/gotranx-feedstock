@@ -32,6 +32,7 @@ requirements:
     - typer
     - toml
     - myokit
+    - pandoc
 test:
   requires:
     - python {{ python_min }}
