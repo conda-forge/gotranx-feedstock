@@ -1,5 +1,5 @@
 {% set name = "gotranx" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4d1ed063c7afc873be59a82b71f91e179b078ae317abb291c2e8aad77ca11c02
+  sha256: 057ff9adbffb9a9057bfa36637a57731c0919dbb94861380c89984038120f5da
 
 build:
   number: 0
