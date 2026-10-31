@@ -10,7 +10,7 @@ source:
   sha256: 37d71a20f858d18943bde5b4d52f8a19f32b31024ae8228edc068adf1790529c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - "gotranx=gotranx.cli:app"
@@ -33,6 +33,9 @@ requirements:
     - toml
     - myokit
     - pandoc
+    - click
+    - black
+
 test:
   requires:
     - python {{ python_min }}
