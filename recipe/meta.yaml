@@ -1,5 +1,5 @@
 {% set name = "gotranx" %}
-{% set version = "2.9.0" %}
+{% set version = "2.10.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 37d71a20f858d18943bde5b4d52f8a19f32b31024ae8228edc068adf1790529c
+  sha256: fde98c7c34f93d2ff106fc3539ea04b99c7740ee937e25f1784cc0b899b4c6b3
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - "gotranx=gotranx.cli:app"
