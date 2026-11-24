@@ -1,0 +1,64 @@
+schema_version: 1
+
+context:
+  python_min: "3.12"
+  version: "2.10.0"
+
+package:
+  name: gotranx
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/g/gotranx/gotranx-${{ version }}.tar.gz
+  sha256: fde98c7c34f93d2ff106fc3539ea04b99c7740ee937e25f1784cc0b899b4c6b3
+
+build:
+  number: 0
+  noarch: python
+  python:
+    entry_points:
+      - gotranx = gotranx.cli:app
+  script: ${{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - attrs
+    - lark
+    - pint
+    - rich-click
+    - structlog
+    - sympy
+    - typer
+    - toml
+    - myokit
+    - pandoc
+    - click
+    - black
+
+tests:
+  - python:
+      imports:
+        - gotranx
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - script:
+      - gotranx --help
+
+about:
+  homepage: https://github.com/finsberg/gotranx
+  summary: A declarative language describing ordinary differential equations
+  license: MIT
+  license_file: LICENSE
+  documentation: https://finsberg.github.io/gotranx/
+  repository: https://github.com/finsberg/gotranx
+
+extra:
+  recipe-maintainers:
+    - finsberg
