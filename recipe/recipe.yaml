@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   python_min: "3.12"
-  version: "2.10.0"
+  version: "2.11.0"
 
 package:
   name: gotranx
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/gotranx/gotranx-${{ version }}.tar.gz
-  sha256: fde98c7c34f93d2ff106fc3539ea04b99c7740ee937e25f1784cc0b899b4c6b3
+  sha256: 828e1538f5e47cdcff2a1e73e1b1b47516497c605af61dd1d7e8bf9afa200bc7
 
 build:
   number: 0
